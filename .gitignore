@@ -1,0 +1,6 @@
+*.idea
+*.iml
+.idea
+*.wsp
+bin
+gen
