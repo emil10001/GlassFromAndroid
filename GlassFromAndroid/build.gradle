@@ -1,0 +1,47 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.7.+'
+    }
+}
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.1"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 19
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("debug.keystore")
+        }
+    }
+
+    buildTypes {
+        debug {
+            runProguard false
+            debuggable true
+        }
+    }
+}
+dependencies {
+    compile 'com.android.support:appcompat-v7:+'
+    compile 'com.google.api-client:google-api-client-android:1.17.0-rc'
+    compile 'com.google.http-client:google-http-client-gson:1.17.0-rc'
+    compile 'com.google.apis:google-api-services-plus:v1-rev116-1.17.0-rc'
+    compile 'com.google.apis:google-api-services-mirror:v1-rev38-1.17.0-rc'
+    compile 'com.google.apis:google-api-services-mirror:v1-rev38-1.17.0-rc-sources'
+    compile 'com.google.apis:google-api-services-mirror:v1-rev38-1.17.0-rc-javadoc'
+    compile 'com.google.apis:google-api-services-tasks:v1-rev19-1.17.0-rc'
+    compile 'com.google.android.gms:play-services:3.2.25'
+}

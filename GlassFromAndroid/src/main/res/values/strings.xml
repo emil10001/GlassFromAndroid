@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GOauthAndroid</string>
+	<string name="login">Login</string>
+	<string name="notify">Notify</string>
+	<string name="already_authenticated">Already authenticated</string>
+</resources>
